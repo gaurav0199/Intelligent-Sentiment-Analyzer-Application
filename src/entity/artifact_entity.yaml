@@ -1,0 +1,3 @@
+data_ingestion_artifact:
+  test_file_path: P:\projects\Intelligent-Sentiment-Analyzer-Application\artifact\02062025__094637\data_ingestion\raw_data\ingested_Data\Test\data.csv
+  train_file_path: P:\projects\Intelligent-Sentiment-Analyzer-Application\artifact\02062025__094637\data_ingestion\raw_data\ingested_Data\Train\data.csv

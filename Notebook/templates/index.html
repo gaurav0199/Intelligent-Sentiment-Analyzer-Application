@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav's App</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 IMDB Sentiment Analysis</h1>
+        <p>Enter a movie review to analyze its sentiment.</p>
+        
+        <form method="POST">
+            <textarea name="text_review" rows="4" cols="50" placeholder="Type your movie review here..." required>{{ review_text }}</textarea><br>
+            <button type="submit">Analyze Sentiment</button>
+        </form>
+        
+        {% if sentiment %}
+            <h2>Prediction: <span class="{{ 'positive' if 'Positive' in sentiment else 'negative' }}">{{ sentiment }}</span></h2>
+            <p><strong>Your Review:</strong> {{ review_text }}</p>
+
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
